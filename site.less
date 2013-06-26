@@ -1,0 +1,120 @@
+@import "elements.less";
+
+body {
+  margin-top: 5em;
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+.swatch(@colour) {
+  color: #fff !important; background-color: fadeout(@colour, 10%);
+}
+
+
+.colour-belize { .swatch(#2980b9); }
+.colour-pomegranate { .swatch(#c0392b); }
+.colour-wisteria { .swatch(#8e44ad); }
+.colour-green-sea { .swatch(#16a085); }
+.colour-pumpkin { .swatch(#d35400); }
+.colour-sunflower { .swatch(#f1c40f); }
+
+.centred {
+  text-align: center;
+}
+
+.section-break {
+  margin-top: 5em;
+}
+
+.title {
+  * { line-height: 100%; }
+  h1 { font-size: 350%; }
+  h2 { font-size: 170%; }
+}
+
+.footer {
+  margin-top: 3em;
+  width: 100%;
+  text-align: center;
+  .opacity(0.3);
+  .transition(0.4s);
+
+  &:hover { 
+    .transition(0.4s);
+    .opacity(1);
+  }
+}
+
+a.card:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  .bordered(#888, #888, #888, #888);
+  .rounded(3px);
+  .drop-shadow(0, 0, 0px, 0.2);
+  .transition(0.4s, ease-out, 0.8s);
+
+  padding: 5px 5px 5px 5px;
+  margin-top: 25px;
+  text-align: center;
+  height: 90px;
+  cursor: pointer;
+
+  h3 {
+    .transition(0.2s, ease-out, 0.2s);
+    font-size: 110%;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    line-height: 110%;
+  }
+
+  p { 
+    .transition(0.2s, ease-out, 0s);
+    .opacity(0);
+    font-size: 85%;
+    line-height: 120%;
+  }
+
+  &:hover, &.active {
+    .transition(0.2s, ease-in, 0s);
+    .drop-shadow(0, 0, 12px, 0.5);
+    .scale(1.1);
+
+    h3 { 
+      margin-top: 5px;
+    }
+    p {
+      .transition(0.2s, ease-in, 0.2s);
+      .opacity(0.6);
+    }
+  }
+}
+
+.card-expansion-row {
+  .transition(1s, ease-in, 0s);
+
+  .card-expansion {
+    .transition(1s, ease-out, 0s);
+    .opacity(0);
+    height: 0;
+    font-size: 95%;
+    margin-top: 0px;
+
+    text-align: justify;
+
+    h4 { margin-top: 1.5em; }
+  }
+  .card-expansion.active {
+    .transition(1s, ease-in, 0s);
+    .opacity(1);
+    height: auto;
+  }
+}
