@@ -2,6 +2,7 @@
 
 body {
   margin-top: 5em;
+  text-align: justify;    
 }
 
 .preload * {
@@ -103,18 +104,14 @@ a.card:hover {
 
   .card-expansion {
     .transition(1s, ease-out, 0s);
-    .opacity(0);
-    height: 0;
+    display: none;
     font-size: 95%;
     margin-top: 0px;
-
-    text-align: justify;
 
     h4 { margin-top: 1.5em; }
   }
   .card-expansion.active {
     .transition(1s, ease-in, 0s);
-    .opacity(1);
-    height: auto;
+    display: inherit;
   }
 }
