@@ -187,3 +187,10 @@ a.card:hover {
   transition: all 1s ease-in 0s;
   display: inherit;
 }
+.sample {
+  margin-top: 7em;
+  text-align: center;
+}
+#materials .sample {
+  margin-top: inherit;
+}
